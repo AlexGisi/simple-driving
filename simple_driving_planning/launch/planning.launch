@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="simple_driving_planning" type="planning_node.py" name="planning_node" output="screen" />
+</launch>
