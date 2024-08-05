@@ -1,3 +1,8 @@
 <launch>
+    <include file="$(find audibot_gazebo)/launch/single_vehicle_example.launch" />
+    
+    <rosparam file="$(find simple_driving_control)/config/control.yaml" />
+
     <node pkg="simple_driving_control" type="control_node.py" name="control_node" output="screen" />
+    <node pkg="simple_driving_control" type="log_node.py" name="log_node" output="screen" />
 </launch>
